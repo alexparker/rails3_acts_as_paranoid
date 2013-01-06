@@ -4,6 +4,7 @@ module ActsAsParanoid
       base.extend ClassMethods
       class << base
         alias_method_chain :belongs_to, :deleted
+        alias_method_chain :has_many, :deleted
       end
     end
 
